@@ -72,8 +72,8 @@ export function ItinerarySearch({
   }, [q, items, placeMap, isZh]);
 
   return (
-    <div ref={wrapRef} className="relative">
-      <div className="glass-pill flex items-center gap-2 px-3 py-1.5">
+    <div ref={wrapRef} className="relative w-full sm:w-auto">
+      <div className="glass-pill flex items-center gap-2 px-3 py-1.5 w-full sm:w-auto">
         <svg width="13" height="13" viewBox="0 0 16 16" aria-hidden className="t-faint">
           <circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" strokeWidth="1.4" />
           <path d="M11 11l3.5 3.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
@@ -87,7 +87,7 @@ export function ItinerarySearch({
           }}
           onFocus={() => setOpen(true)}
           placeholder={t("placeholder")}
-          className="bg-transparent outline-none text-[12px] w-44 sm:w-56 placeholder:t-faint"
+          className="bg-transparent outline-none text-[12px] w-full min-w-0 sm:w-56 placeholder:t-faint"
           aria-label={t("placeholder")}
         />
         {q && (

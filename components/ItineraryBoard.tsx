@@ -369,29 +369,35 @@ export function ItineraryBoard() {
     >
       <DayTabs activeDay={activeDay} onChange={setDay} counts={counts} />
 
-      <div className="flex items-center mt-4 mb-3 px-1 gap-3">
-        <p className="text-[12px] t-mute flex-1 min-w-0 truncate">{t("hint")}</p>
-        <ItinerarySearch
-          items={items}
-          placeMap={placeMap}
-          onJump={(d, itemId) => {
-            setDay(d);
-            setTimeout(() => {
-              const el = document.getElementById(`item-${itemId}`);
-              if (el) {
-                el.scrollIntoView({ behavior: "smooth", block: "center" });
-                el.classList.add("flash-highlight");
-                setTimeout(() => el.classList.remove("flash-highlight"), 1600);
-              }
-            }, 60);
-          }}
-        />
-        <StatusPill
-          cloud={cloud}
-          saveState={saveState}
-          saving={t("saving")}
-          saved={t("saved")}
-        />
+      <div className="mt-4 mb-3 px-1 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+        <p className="text-[12px] t-mute order-2 sm:order-1 sm:flex-1 sm:min-w-0 sm:truncate">
+          {t("hint")}
+        </p>
+        <div className="order-1 sm:order-2 flex items-center gap-2 sm:gap-3 min-w-0">
+          <div className="flex-1 min-w-0 sm:flex-initial">
+            <ItinerarySearch
+              items={items}
+              placeMap={placeMap}
+              onJump={(d, itemId) => {
+                setDay(d);
+                setTimeout(() => {
+                  const el = document.getElementById(`item-${itemId}`);
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth", block: "center" });
+                    el.classList.add("flash-highlight");
+                    setTimeout(() => el.classList.remove("flash-highlight"), 1600);
+                  }
+                }, 60);
+              }}
+            />
+          </div>
+          <StatusPill
+            cloud={cloud}
+            saveState={saveState}
+            saving={t("saving")}
+            saved={t("saved")}
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 items-start">
