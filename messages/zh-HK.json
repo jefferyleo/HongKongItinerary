@@ -1,0 +1,113 @@
+{
+  "site": {
+    "title": "香港之旅 2026",
+    "subtitle": "6月12日 – 18日 · 七日行程 · 大馬 ⇄ 香港",
+    "tagline": "玻璃質感行程表，可以隨手拖、隨手換。"
+  },
+  "nav": {
+    "language": "語言",
+    "english": "English",
+    "cantonese": "繁體中文"
+  },
+  "days": {
+    "day1": { "label": "第一日", "theme": "抵港 · ASOT 2026", "date": "6月12日 星期五" },
+    "day2": { "label": "第二日", "theme": "尖沙咀海濱漫遊", "date": "6月13日 星期六" },
+    "day3": { "label": "第三日", "theme": "油麻地 × 旺角 × 佐敦", "date": "6月14日 星期日" },
+    "day4": { "label": "第四日", "theme": "中環 × 上環 × 太平山", "date": "6月15日 星期一" },
+    "day5": { "label": "第五日", "theme": "深水埗 × 灣仔食街", "date": "6月16日 星期二" },
+    "day6": { "label": "第六日", "theme": "飲茶 · 行街 · 跑馬地夜賽", "date": "6月17日 星期三" },
+    "day7": { "label": "第七日", "theme": "K11 MUSEA × 返程", "date": "6月18日 星期四" }
+  },
+  "slots": {
+    "transit": "交通",
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "breakfast": "早餐",
+    "brunch": "早午餐",
+    "lunch": "午餐",
+    "snack": "小食",
+    "dinner": "晚餐",
+    "dessert": "糖水",
+    "drinks": "飲酒",
+    "coffee": "咖啡",
+    "activity": "活動",
+    "sightseeing": "觀光",
+    "rest": "休息",
+    "event": "節目",
+    "shopping": "購物"
+  },
+  "card": {
+    "openInMaps": "用地圖開啟",
+    "showMap": "顯示地圖",
+    "hideMap": "收起地圖",
+    "edit": "編輯",
+    "remove": "移除",
+    "moveToPool": "放返收藏",
+    "exit": "出口",
+    "hours": "營業時間"
+  },
+  "edit": {
+    "addStop": "加新一站",
+    "editStop": "編輯一站",
+    "addPlace": "新增地點",
+    "editPlace": "編輯地點",
+    "deletePlace": "由收藏夾刪除",
+    "save": "儲存",
+    "cancel": "取消",
+    "delete": "刪除",
+    "field": {
+      "time": "時間",
+      "slot": "類別",
+      "linkedPlace": "對應地點",
+      "noPlace": "— 不對應地點（自定義）—",
+      "titleEn": "標題（英文）",
+      "titleZh": "標題（繁中）",
+      "noteEn": "備註（英文）",
+      "noteZh": "備註（繁中）",
+      "nameEn": "名稱（英文）",
+      "nameZh": "名稱（繁中）",
+      "category": "分類",
+      "address": "地址",
+      "mrtEn": "港鐵站（英文）",
+      "mrtZh": "港鐵站（繁中）",
+      "exit": "出口",
+      "hours": "營業時間",
+      "descriptionEn": "簡介（英文）",
+      "descriptionZh": "簡介（繁中）"
+    },
+    "category": {
+      "food": "食",
+      "drink": "飲",
+      "dessert": "甜品",
+      "sight": "景點",
+      "event": "節目",
+      "hotel": "酒店",
+      "transit": "交通"
+    },
+    "confirmDeletePlace": "確定要由收藏夾刪除此地點？仲喺度用緊呢個地點嘅行程卡片會保留但會解除連結。"
+  },
+  "pool": {
+    "title": "收藏夾",
+    "subtitle": "將卡片拖入任何一日",
+    "empty": "全部都安排好喇，正！",
+    "filterAll": "全部",
+    "filterFood": "食",
+    "filterDrink": "飲",
+    "filterDessert": "甜品",
+    "filterSight": "景點"
+  },
+  "drag": {
+    "hint": "拖動卡片可以調換時間或者搬去第二日",
+    "saving": "儲存中…",
+    "saved": "已儲存",
+    "offline": "離線草稿"
+  },
+  "transit": {
+    "aelToTst": "機場快線 → 九龍站 → 免費 K1 接駁巴士 → 九龍酒店"
+  },
+  "search": {
+    "placeholder": "搜尋行程…",
+    "empty": "搵唔到",
+    "clear": "清除"
+  }
+}

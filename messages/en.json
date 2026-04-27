@@ -1,0 +1,113 @@
+{
+  "site": {
+    "title": "Hong Kong 2026",
+    "subtitle": "12 – 18 June · 7 Days · MYS ⇄ HKG",
+    "tagline": "A liquid-glass itinerary you can drag, drop, and remix."
+  },
+  "nav": {
+    "language": "Language",
+    "english": "English",
+    "cantonese": "繁體中文"
+  },
+  "days": {
+    "day1": { "label": "Day 1", "theme": "Arrival · ASOT 2026", "date": "Fri 12 Jun" },
+    "day2": { "label": "Day 2", "theme": "TST Harbour Walk", "date": "Sat 13 Jun" },
+    "day3": { "label": "Day 3", "theme": "Yau Ma Tei × Mong Kok × Jordan", "date": "Sun 14 Jun" },
+    "day4": { "label": "Day 4", "theme": "Central × Sheung Wan × The Peak", "date": "Mon 15 Jun" },
+    "day5": { "label": "Day 5", "theme": "Sham Shui Po × Wan Chai 食街", "date": "Tue 16 Jun" },
+    "day6": { "label": "Day 6", "theme": "Yum Cha · Shopping · Happy Valley Race Night", "date": "Wed 17 Jun" },
+    "day7": { "label": "Day 7", "theme": "K11 MUSEA × Departure", "date": "Thu 18 Jun" }
+  },
+  "slots": {
+    "transit": "Transit",
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "breakfast": "Breakfast",
+    "brunch": "Brunch",
+    "lunch": "Lunch",
+    "snack": "Snack",
+    "dinner": "Dinner",
+    "dessert": "Dessert",
+    "drinks": "Drinks",
+    "coffee": "Coffee",
+    "activity": "Activity",
+    "sightseeing": "Sightseeing",
+    "rest": "Rest",
+    "event": "Event",
+    "shopping": "Shopping"
+  },
+  "card": {
+    "openInMaps": "Open in Maps",
+    "showMap": "Show map",
+    "hideMap": "Hide map",
+    "edit": "Edit",
+    "remove": "Remove",
+    "moveToPool": "Move to pool",
+    "exit": "Exit",
+    "hours": "Hours"
+  },
+  "edit": {
+    "addStop": "Add stop",
+    "editStop": "Edit stop",
+    "addPlace": "Add place",
+    "editPlace": "Edit place",
+    "deletePlace": "Delete from catalog",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "field": {
+      "time": "Time",
+      "slot": "Slot",
+      "linkedPlace": "Linked place",
+      "noPlace": "— None (custom stop) —",
+      "titleEn": "Title (EN)",
+      "titleZh": "Title (繁中)",
+      "noteEn": "Note (EN)",
+      "noteZh": "Note (繁中)",
+      "nameEn": "Name (English)",
+      "nameZh": "Name (繁中)",
+      "category": "Category",
+      "address": "Address",
+      "mrtEn": "MRT (English)",
+      "mrtZh": "MRT (繁中)",
+      "exit": "Exit",
+      "hours": "Hours",
+      "descriptionEn": "Description (EN)",
+      "descriptionZh": "Description (繁中)"
+    },
+    "category": {
+      "food": "Food",
+      "drink": "Drink",
+      "dessert": "Dessert",
+      "sight": "Sight",
+      "event": "Event",
+      "hotel": "Hotel",
+      "transit": "Transit"
+    },
+    "confirmDeletePlace": "Delete this place from your catalog? Items currently using it will be unlinked but kept."
+  },
+  "pool": {
+    "title": "Place Pool",
+    "subtitle": "Drag any card into a day",
+    "empty": "Everything is scheduled. Nice.",
+    "filterAll": "All",
+    "filterFood": "Food",
+    "filterDrink": "Drinks",
+    "filterDessert": "Dessert",
+    "filterSight": "Sights"
+  },
+  "drag": {
+    "hint": "Drag cards to swap times or move between days",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "offline": "Offline draft"
+  },
+  "transit": {
+    "aelToTst": "AEL → Kowloon Station → free K1 shuttle bus → The Kowloon Hotel"
+  },
+  "search": {
+    "placeholder": "Search itinerary…",
+    "empty": "No matches",
+    "clear": "Clear"
+  }
+}

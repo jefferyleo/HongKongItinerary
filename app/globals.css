@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans HK", ui-sans-serif, system-ui, sans-serif;
+  --font-zh: "Noto Sans HK", "PingFang HK", "Microsoft JhengHei", sans-serif;
+
+  --color-ink:        #14161b;
+  --color-ink-soft:   #3a3f4a;
+  --color-ink-mute:   #6b7280;
+  --color-ink-faint:  #a3a8b3;
+  --color-line:       rgba(20, 22, 27, 0.08);
+}
+
+html, body {
+  min-height: 100%;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Soft, near-white background with very gentle pastel washes */
+body {
+  background:
+    radial-gradient(ellipse 900px 600px at  8%  -10%, rgba(255, 184, 168, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 800px 600px at 95%   5%, rgba(196, 184, 255, 0.40) 0%, transparent 60%),
+    radial-gradient(ellipse 1100px 700px at 60% 110%, rgba(170, 210, 255, 0.40) 0%, transparent 60%),
+    linear-gradient(180deg, #fbfaf7 0%, #f4f3ef 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(20, 22, 27, 0.04) 1px, transparent 0);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* —————————————————————— Liquid-glass primitives (light) —————————————————————— */
+
+.glass {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.62) 100%);
+  backdrop-filter: blur(28px) saturate(150%);
+  -webkit-backdrop-filter: blur(28px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 1px 0 rgba(20, 22, 27, 0.04),
+    0 16px 40px -18px rgba(20, 22, 27, 0.18);
+  border-radius: 20px;
+}
+
+.glass-soft {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 1px 0 rgba(20, 22, 27, 0.03);
+  border-radius: 16px;
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(20, 22, 27, 0.04);
+  color: var(--color-ink-soft);
+}
+
+/* Day accents — quiet, used as a thin top stripe and small dot, not as a tinted card */
+.day-accent-1 { color: #c97a4d; }    /* warm amber */
+.day-accent-2 { color: #c4577f; }    /* rose */
+.day-accent-3 { color: #8a6dd1; }    /* violet */
+.day-accent-4 { color: #4f7fc7; }    /* sky */
+.day-accent-5 { color: #3fa37e; }    /* emerald */
+.day-accent-6 { color: #c057a8; }    /* fuchsia */
+.day-accent-7 { color: #6a7588; }    /* slate */
+
+.day-bg-1 { background: #c97a4d; }
+.day-bg-2 { background: #c4577f; }
+.day-bg-3 { background: #8a6dd1; }
+.day-bg-4 { background: #4f7fc7; }
+.day-bg-5 { background: #3fa37e; }
+.day-bg-6 { background: #c057a8; }
+.day-bg-7 { background: #6a7588; }
+
+/* Subtle day tints for headers — barely-there color wash */
+.tint-day-1 { background-image: linear-gradient(180deg, rgba(201,122,77,0.05), transparent); }
+.tint-day-2 { background-image: linear-gradient(180deg, rgba(196,87,127,0.05), transparent); }
+.tint-day-3 { background-image: linear-gradient(180deg, rgba(138,109,209,0.05), transparent); }
+.tint-day-4 { background-image: linear-gradient(180deg, rgba(79,127,199,0.05), transparent); }
+.tint-day-5 { background-image: linear-gradient(180deg, rgba(63,163,126,0.05), transparent); }
+.tint-day-6 { background-image: linear-gradient(180deg, rgba(192,87,168,0.05), transparent); }
+.tint-day-7 { background-image: linear-gradient(180deg, rgba(106,117,136,0.05), transparent); }
+
+/* Floating pastel orbs */
+@keyframes float-orb {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(20px, -30px, 0) scale(1.05); }
+}
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+  z-index: 0;
+  pointer-events: none;
+  animation: float-orb 22s ease-in-out infinite;
+}
+@media (max-width: 640px) {
+  .orb { transform: scale(0.6); opacity: 0.4; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(20, 22, 27, 0.12);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 22, 27, 0.22);
+  background-clip: content-box;
+}
+
+/* Drag affordances */
+.dragging {
+  transform: scale(1.025) rotate(-0.6deg);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,1),
+    0 24px 48px -12px rgba(20, 22, 27, 0.25),
+    0 0 0 1px rgba(20, 22, 27, 0.08);
+  cursor: grabbing !important;
+}
+.drop-target {
+  outline: 1.5px dashed rgba(20, 22, 27, 0.30);
+  outline-offset: 4px;
+}
+
+.mono-num { font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+.zh { font-family: var(--font-zh); }
+
+/* Quiet text utilities */
+.t-soft { color: var(--color-ink-soft); }
+.t-mute { color: var(--color-ink-mute); }
+.t-faint { color: var(--color-ink-faint); }
+
+/* Search-jump flash */
+@keyframes flash-card {
+  0%   { box-shadow: 0 0 0 0 rgba(94, 156, 255, 0.55); }
+  40%  { box-shadow: 0 0 0 6px rgba(94, 156, 255, 0.18); }
+  100% { box-shadow: 0 0 0 0 rgba(94, 156, 255, 0); }
+}
+.flash-highlight > div { animation: flash-card 1.5s ease-out; border-radius: 1rem; }
